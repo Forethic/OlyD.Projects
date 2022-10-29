@@ -9,7 +9,6 @@ namespace ComicReader.ViewModels
         public readonly string Label;
         public readonly Type ViewModel;
 
-
         public NavigationItem(Type viewModel)
         {
             ViewModel = viewModel;
@@ -19,7 +18,7 @@ namespace ComicReader.ViewModels
             : this(viewModel)
         {
             Label = label;
-            Glyph = Char.ConvertFromUtf32(glyph).ToString();
+            Glyph = char.ConvertFromUtf32(glyph).ToString();
         }
     }
 }

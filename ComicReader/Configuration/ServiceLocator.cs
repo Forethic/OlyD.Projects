@@ -22,6 +22,8 @@ namespace ComicReader
             serviceCollection.AddTransient<ShellViewModel>();
             serviceCollection.AddTransient<MainShellViewModel>();
             serviceCollection.AddTransient<SettingsViewModel>();
+            serviceCollection.AddTransient<LibraryViewModel>();
+            serviceCollection.AddTransient<ReadHistoryViewModel>();
 
             _rootServiceProvider = serviceCollection.BuildServiceProvider();
         }

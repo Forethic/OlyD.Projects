@@ -23,6 +23,8 @@ namespace ComicReader
             NavigationService.Register<MainShellViewModel, MainShellView>();
 
             NavigationService.Register<SettingsViewModel, SettingsView>();
+            NavigationService.Register<LibraryViewModel, LibraryView>();
+            NavigationService.Register<ReadHistoryViewModel, ReadHistoryView>();
         }
     }
 }

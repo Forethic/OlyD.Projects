@@ -11,8 +11,8 @@
     <AssemblyName>ComicReader</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
-    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -126,10 +126,18 @@
     <Compile Include="Services\ActivationService.cs" />
     <Compile Include="Services\CommonServices.cs" />
     <Compile Include="Services\NavigationService.cs" />
+    <Compile Include="ViewModels\Library\LibraryViewModel.cs" />
+    <Compile Include="ViewModels\ReadHistory\ReadHistoryViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Shell\MainShellViewModel.cs" />
     <Compile Include="ViewModels\Shell\NavigationItem.cs" />
     <Compile Include="ViewModels\Shell\ShellViewModel.cs" />
+    <Compile Include="Views\Library\LibraryView.xaml.cs">
+      <DependentUpon>LibraryView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ReadHistory\ReadHistoryView.xaml.cs">
+      <DependentUpon>ReadHistoryView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Settings\SettingsView.xaml.cs">
       <DependentUpon>SettingsView.xaml</DependentUpon>
     </Compile>
@@ -163,6 +171,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Views\Library\LibraryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ReadHistory\ReadHistoryView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Settings\SettingsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

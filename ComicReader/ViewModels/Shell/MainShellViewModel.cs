@@ -1,12 +1,16 @@
 ﻿using OlyD.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Controls;
 
 namespace ComicReader.ViewModels
 {
     public class MainShellViewModel : ShellViewModel
     {
+        private readonly NavigationItem LibraryItem = new NavigationItem(0xEA8A, "Library", typeof(LibraryViewModel));
+        private readonly NavigationItem ReadHistoryItem = new NavigationItem(0xE81C, "Read History", typeof(ReadHistoryViewModel));
         private readonly NavigationItem SettingsItem = new NavigationItem(0x0000, "Settings", typeof(SettingsViewModel));
 
         public MainShellViewModel(ICommonServices commonService)
@@ -42,9 +46,23 @@ namespace ComicReader.ViewModels
         }
         private bool _isPaneVisible = true;
 
+        public bool AlwaysShowHeader
+        {
+            get => _alwaysShowHeader;
+            set => Update(ref _alwaysShowHeader, value);
+        }
+        private bool _alwaysShowHeader = false;
+
+        public string Header
+        {
+            get => _header;
+            set => Update(ref _header, value);
+        }
+        private string _header;
+
         public override Task LoadAsync(ShellArgs args)
         {
-            //Items = GetItems().ToArray();
+            Items = GetItems().ToArray();
             return base.LoadAsync(args);
         }
 
@@ -55,15 +73,22 @@ namespace ComicReader.ViewModels
                 case nameof(SettingsViewModel):
                     NavigationService.Navigate(viewModel, new SettingsArgs());
                     break;
+                case nameof(LibraryViewModel):
+                    NavigationService.Navigate(viewModel, new LibraryArgs());
+                    break;
+                case nameof(ReadHistoryViewModel):
+                    NavigationService.Navigate(viewModel, new ReadHistoryArgs());
+                    break;
                 default:
                     throw new NotImplementedException();
             }
+            Header = viewModel.Name;
         }
 
         private IEnumerable<NavigationItem> GetItems()
         {
-            // TODO:
-            return null;
+            yield return LibraryItem;
+            yield return ReadHistoryItem;
         }
     }
 }

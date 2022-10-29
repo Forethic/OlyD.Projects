@@ -7,7 +7,7 @@ namespace ComicReader.Services
 {
     public class ActivationInfo
     {
-        public static ActivationInfo CreateDefault() => Create<SettingsViewModel>();
+        public static ActivationInfo CreateDefault() => Create<LibraryViewModel>();
 
         public static ActivationInfo Create<TViewModel>(object entryArgs = null)
             where TViewModel : BaseViewModel
