@@ -2,7 +2,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace OlyD.Infrastructure
+namespace Lia.ViewModels
 {
     public class ObservableObject : INotifyPropertyChanged
     {

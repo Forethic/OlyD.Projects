@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace OlyD.Infrastructure
+namespace Lia.ViewModels
 {
     public class RelayCommand : ICommand
     {

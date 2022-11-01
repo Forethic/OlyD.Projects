@@ -1,4 +1,4 @@
-﻿namespace OlyD.Services
+﻿namespace Lia.Services
 {
     public interface ICommonServices
     {

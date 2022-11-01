@@ -1,5 +1,5 @@
 ﻿using ComicReader.ViewModels;
-using OlyD.Infrastructure;
+using Lia.ViewModels;
 using System;
 using Windows.ApplicationModel.Activation;
 

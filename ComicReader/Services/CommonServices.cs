@@ -1,4 +1,4 @@
-﻿using OlyD.Services;
+﻿using Lia.Services;
 
 namespace ComicReader.Services
 {

@@ -1,6 +1,6 @@
 ﻿using ComicReader.ViewModels;
 using ComicReader.Views;
-using OlyD.Services;
+using Lia.Services;
 using System;
 using System.Collections.Concurrent;
 using System.Linq;

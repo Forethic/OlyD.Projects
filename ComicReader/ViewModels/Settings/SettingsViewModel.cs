@@ -1,5 +1,5 @@
-﻿using OlyD.Infrastructure;
-using OlyD.Services;
+﻿using Lia.ViewModels;
+using Lia.Services;
 
 namespace ComicReader.ViewModels
 {

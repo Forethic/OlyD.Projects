@@ -1,4 +1,4 @@
-﻿using OlyD.Infrastructure;
+﻿using Lia.ViewModels;
 using System;
 
 namespace ComicReader.ViewModels

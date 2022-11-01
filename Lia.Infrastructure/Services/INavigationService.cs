@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace OlyD.Services
+namespace Lia.Services
 {
     public interface INavigationService
     {

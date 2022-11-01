@@ -1,6 +1,6 @@
-﻿using OlyD.Services;
+﻿using Lia.Services;
 
-namespace OlyD.Infrastructure
+namespace Lia.ViewModels
 {
     public class BaseViewModel : ObservableObject
     {

@@ -8,9 +8,20 @@
       mc:Ignorable="d">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="56"
-                   Text="LibraryView" />
+        <StackPanel Margin="0,20,0,0"
+                    HorizontalAlignment="Center">
+            <Image Width="256"
+                   Height="256"
+                   Source="ms-appx:///Assets/SplashScreen.png" />
+            <TextBlock HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       Text="现在把漫画书加入书库" />
+            <TextBlock Text="增加你的漫画文件夹, ComicReader会自动同步文件夹以保持书库始终处于最新状态" />
+
+            <Button Margin="32"
+                    HorizontalAlignment="Center"
+                    Content="将文件夹添加到库" />
+        </StackPanel>
     </Grid>
 </Page>

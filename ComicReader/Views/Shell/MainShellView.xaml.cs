@@ -1,6 +1,6 @@
 ﻿using ComicReader.Services;
 using ComicReader.ViewModels;
-using OlyD.Services;
+using Lia.Services;
 using System.Linq;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;

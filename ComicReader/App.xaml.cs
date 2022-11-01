@@ -1,7 +1,6 @@
 ﻿using ComicReader.Services;
 using ComicReader.Views;
-using OlyD.Services;
-using System;
+using Lia.Services;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;

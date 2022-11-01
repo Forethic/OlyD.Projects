@@ -1,7 +1,7 @@
 ﻿using ComicReader.Services;
 using ComicReader.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
-using OlyD.Services;
+using Lia.Services;
 using System;
 using System.Collections.Concurrent;
 using Windows.UI.ViewManagement;
