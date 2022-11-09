@@ -1,5 +1,6 @@
 ﻿using ComicReader.ViewModels;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace ComicReader.Views
 {
@@ -12,7 +13,16 @@ namespace ComicReader.Views
 
         public LibraryView()
         {
+            ViewModel = ServiceLocator.Current.GetService<LibraryViewModel>();
+
             InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            ViewModel.LoadAsync();
         }
     }
 }
