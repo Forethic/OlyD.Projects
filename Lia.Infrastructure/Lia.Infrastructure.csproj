@@ -120,7 +120,14 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ControlHelpers\ImageHelper.cs" />
     <Compile Include="Extensions\PathEx.cs" />
+    <Compile Include="Extensions\StoryboardEx.cs" />
+    <Compile Include="Extensions\UIElementEx.cs" />
+    <Compile Include="Utils\EventAsync.cs" />
+    <Compile Include="Utils\ExtensionUtil.cs" />
+    <Compile Include="Utils\ImageUtil.cs" />
+    <Compile Include="Utils\ThreadUtil.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\ICommonServices.cs" />
