@@ -40,7 +40,11 @@ namespace ComicReader.Views
             var activationInfo = ActivationService.GetActivationInfo(e);
             await Startup.ConfigureAsync();
 
+#if DEBUG
+            await Task.Delay(1000).ContinueWith(async (t) =>
+#else
             await Task.Delay(2000).ContinueWith(async (t) =>
+#endif
              {
                  await Dispatcher.RunAsync(CoreDispatcherPriority.Normal, () =>
                   {

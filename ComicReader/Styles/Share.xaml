@@ -3,6 +3,7 @@
 
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Converters.xaml" />
+        <ResourceDictionary Source="Selectors.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 </ResourceDictionary>

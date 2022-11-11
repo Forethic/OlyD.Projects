@@ -3,5 +3,6 @@
                     xmlns:cvt="using:ComicReader.Converters">
 
     <cvt:BoolToVisibilityConverter x:Key="BoolToVisibility" />
+    <cvt:ReverseBoolToVisibilityConverter x:Key="RevBoolToVisibility" />
 
 </ResourceDictionary>

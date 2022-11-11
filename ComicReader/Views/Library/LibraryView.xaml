@@ -9,7 +9,8 @@
 
     <Grid>
         <StackPanel Margin="0,20,0,0"
-                    HorizontalAlignment="Center">
+                    HorizontalAlignment="Center"
+                    Visibility="{x:Bind ViewModel.IsEmpty, Mode=OneWay, Converter={StaticResource BoolToVisibility}}">
             <Image Width="256"
                    Height="256"
                    Source="ms-appx:///Assets/SplashScreen.png" />
@@ -21,7 +22,37 @@
 
             <Button Margin="32"
                     HorizontalAlignment="Center"
+                    Click="BtnAddFolder_Click"
                     Content="将文件夹添加到库" />
         </StackPanel>
+
+        <ScrollViewer HorizontalScrollBarVisibility="Hidden"
+                      HorizontalScrollMode="Disabled"
+                      VerticalScrollBarVisibility="Visible"
+                      VerticalScrollMode="Auto"
+                      Visibility="{x:Bind ViewModel.IsEmpty, Mode=OneWay, Converter={StaticResource RevBoolToVisibility}}"
+                      ZoomMode="Disabled">
+            <GridView Holding="OnHoding"
+                      IsHoldingEnabled="False"
+                      IsItemClickEnabled="True"
+                      IsSwipeEnabled="True"
+                      ItemClick="OnItemClick"
+                      ItemTemplateSelector="{StaticResource LibraryItemSelector}"
+                      ItemsSource="{x:Bind ViewModel.Items}"
+                      SelectionChanged="OnSelectionChanged"
+                      SelectionMode="Single">
+                <GridView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <ItemsWrapGrid Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </GridView.ItemsPanel>
+
+                <GridView.ItemContainerStyle>
+                    <Style TargetType="GridViewItem">
+                        <Setter Property="Margin" Value="10" />
+                    </Style>
+                </GridView.ItemContainerStyle>
+            </GridView>
+        </ScrollViewer>
     </Grid>
 </Page>

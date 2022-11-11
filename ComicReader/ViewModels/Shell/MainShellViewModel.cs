@@ -75,7 +75,7 @@ namespace ComicReader.ViewModels
                     NavigationService.Navigate(viewModel, new SettingsArgs());
                     break;
                 case nameof(LibraryViewModel):
-                    NavigationService.Navigate(viewModel);
+                    NavigationService.Navigate(viewModel, new LibraryArgs());
                     break;
                 case nameof(ReadHistoryViewModel):
                     NavigationService.Navigate(viewModel, new ReadHistoryArgs());

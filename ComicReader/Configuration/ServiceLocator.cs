@@ -25,7 +25,7 @@ namespace ComicReader
             serviceCollection.AddTransient<LibraryViewModel>();
             serviceCollection.AddTransient<ReadHistoryViewModel>();
 
-            serviceCollection.AddSingleton<LibraryViewModel>();
+            serviceCollection.AddTransient<LibraryViewModel>();
 
             _rootServiceProvider = serviceCollection.BuildServiceProvider();
         }
